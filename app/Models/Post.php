@@ -14,10 +14,13 @@ class Post extends Model
         'cover_image',
         'content',
         'slug',
-        'category_id'
+        'type_id'
     ];
     public static function generateSlug(string $title) {
         return Str::slug($title, '-');
+    }
+    public function type(){
+        return $this->belongsTo(Type::class);
     }
 
 

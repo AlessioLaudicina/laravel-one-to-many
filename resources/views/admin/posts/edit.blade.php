@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('page-title', "Modifica: $post->title")
+
 
 @section('content')
 

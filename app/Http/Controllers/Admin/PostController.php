@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use App\Models\Type;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest; 
 use Illuminate\Http\Request;
@@ -87,7 +88,7 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         
-        $validated_data = $request->validated();
+        $validated_data = $request->all();
         $validated_data['slug'] = Post::generateSlug($request->title);
 
         $checkPost = Post::where('slug', $validated_data['slug'])->where('id', '<>', $post->id)->first();

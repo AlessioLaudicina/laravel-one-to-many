@@ -10,6 +10,7 @@
         <th scope="col">#</th>
         <th scope="col">Titolo</th>
         <th scope="col">Slug</th>
+        <th scope="col">Tipo</th>
         <th scope="col">Azioni</th>
       </tr>
     </thead>
@@ -19,6 +20,8 @@
                 <td>{{$post->id}}</td>
                 <td>{{$post->title}}</td>
                 <td>{{$post->slug}}</td>
+                <td>{{$post->type?->name}}</td>
+
                 <td class="flex">
                     <a class="btn btn-primary" href="{{route('admin.posts.show', $post->slug)}}">VEDI</a>
                     <a class="btn btn-warning" href="{{route('admin.posts.edit', $post->slug)}}">MODIFICA</a>

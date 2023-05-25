@@ -8,13 +8,13 @@
         </li>
 
         <li class="nav-item">
-        <a href="{{route('admin.posts.create')}}" class="nav-link">Crea nuovo post</a>
+        <a href="{{route('admin.posts.create')}}" class="nav-link">Crea nuovo progetto</a>
         </li>
 
 
         <li class="nav-item">
             <a href="{{route('admin.posts.index')}}" class="nav-link">
-                Posts
+                I tuoi progetti
             </a>
         </li>
 
